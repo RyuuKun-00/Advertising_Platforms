@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Services\DataInitializationService.cs~RF9bbd24.TMP\**" />
+    <EmbeddedResource Remove="Services\DataInitializationService.cs~RF9bbd24.TMP\**" />
+    <None Remove="Services\DataInitializationService.cs~RF9bbd24.TMP\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.17" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdvertisingPlatforms.Core\AdvertisingPlatforms.Core.csproj" />
+    <ProjectReference Include="..\AdvertisingPlatforms.DataAccess\AdvertisingPlatforms.DataAccess.csproj" />
+  </ItemGroup>
+
+</Project>

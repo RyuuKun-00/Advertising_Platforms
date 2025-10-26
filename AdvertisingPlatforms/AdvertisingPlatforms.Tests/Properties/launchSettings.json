@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "AdvertisingPlatforms.Tests": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "https://localhost:4697;http://localhost:4698"
+    }
+  }
+}

@@ -1,0 +1,352 @@
+@import url("https://fonts.googleapis.com/css?family=Maven+Pro:400,700");
+html {
+  font-family: "Maven Pro", sans-serif;
+  font-size: 18px;
+  color: #000000;
+}
+
+body {
+  padding-top: 70px;
+  background-color: #ffffff;
+  fill: #000000;
+}
+
+a {
+  color: #000000;
+  font-weight: normal;
+  text-decoration: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #000000;
+  -webkit-box-shadow: 0 0 0px 1000px #d8d8d8 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999999;
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.navbar[class*=-unpinned] {
+  transform: translate(0, -150%);
+}
+.navbar[class*=-pinned] {
+  transform: translate(0, 0);
+}
+.navbar[class*=headroom--not-top] {
+  background: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.nav-svg {
+  height: 2rem;
+  margin-right: 10px;
+}
+
+.navbar-brand:hover {
+  color: #000000 !important;
+  fill: #000000 !important;
+}
+
+.upload-file {
+  transition: all 0.4s ease;
+}
+.upload-file:hover {
+  color: #1ae000 !important;
+  fill: #1ae000 !important;
+}
+
+.color-mode {
+  transition: all 0.4s ease;
+}
+.color-mode:hover {
+  color: #ffc200 !important;
+  fill: #ffc200 !important;
+}
+
+.svg-moon {
+  display: block;
+}
+
+.svg-sun {
+  display: none;
+}
+
+.svg-moon,
+.svg-sun {
+  height: 1.5rem;
+}
+
+.copyright-text {
+  font-size: 16px;
+  font-weight: normal;
+  display: block;
+}
+
+.upload-file {
+  margin-right: 10px;
+}
+
+.color-mode, .upload-file {
+  cursor: pointer;
+}
+
+.success {
+  color: #06a800;
+}
+
+.error {
+  color: #f00000;
+}
+
+dialog {
+  margin: 0;
+  padding: 5px;
+  position: fixed;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: #ffffff;
+  color: #000000;
+  justify-content: center;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.upload-zone-dragover {
+  height: 50vh;
+  min-height: 200px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid currentColor;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 18px;
+  place-content: center;
+  text-align: center;
+  background-color: #593273;
+}
+
+.upload-zone-dragover svg {
+  width: 15vw;
+  margin: auto;
+  pointer-events: none;
+}
+
+.upload-zone-dragover._active {
+  color: #c56fff;
+  background-color: rgba(197, 111, 255, 0.4666666667);
+}
+
+.form-upload-container {
+  margin-bottom: 10px;
+}
+
+.form-upload-hint {
+  font-size: bold;
+}
+
+.form-upload-title {
+  font-weight: bold;
+}
+
+.form-upload-input {
+  background-color: #ffffff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+
+.form-upload-input::file-selector-button {
+  margin-right: 10px;
+  border: none;
+  height: 3rem;
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+.form-upload-input::file-selector-button:hover {
+  background-color: #c56fff;
+}
+
+.form-upload-input:focus {
+  border: none;
+}
+
+.closeDialogBtn {
+  border: none;
+  height: 3rem;
+  border-radius: 10px;
+  background-color: #ffffff;
+  transition: background-color 0.2s linear;
+}
+.closeDialogBtn:hover {
+  background-color: #c56fff;
+}
+
+.search-box {
+  margin: 0;
+  padding: 0 3px 0 1rem;
+  border: #3b3b3b 2px;
+  border-top-left-radius: 50vh;
+  border-bottom-left-radius: 50vh;
+  height: 2rem;
+  background-color: #d8d8d8;
+}
+
+.search-input {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto;
+  padding: 0;
+  border: none;
+  height: 1.5rem;
+  background-color: #d8d8d8;
+  outline: none;
+}
+.search-input:focus {
+  outline: none;
+}
+.search-input:active {
+  outline: none;
+}
+
+.search-btn {
+  margin: 0;
+  padding: 0;
+  border: #3b3b3b 2px;
+  height: 2rem;
+  border-top-right-radius: 50vh;
+  border-bottom-right-radius: 50vh;
+  background-color: #7c7c7c;
+  transition: all 0.4s ease;
+}
+.search-btn:hover {
+  background-color: #c56fff;
+}
+
+.search-svg {
+  height: 1.5rem;
+  fill: #ffffff;
+}
+
+details {
+  border: 1px solid #aaa;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.group {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+#contetnt {
+  color: #000000;
+}
+#contetnt h1 {
+  font-size: 1.2rem;
+}
+
+.dark-mode {
+  background: #0c0c0d;
+}
+.dark-mode .navbar[class*=headroom--not-top] {
+  background: #0c0c0d;
+  border-bottom: 1px solid #1f1f1f;
+}
+.dark-mode .svg-moon {
+  display: none;
+}
+.dark-mode .svg-sun {
+  display: block;
+}
+.dark-mode .navbar-brand,
+.dark-mode .color-mode,
+.dark-mode .upload-file,
+.dark-mode .form-upload-input,
+.dark-mode .closeDialogBtn,
+.dark-mode .form-upload-title {
+  color: #ffffff;
+  fill: #ffffff;
+}
+.dark-mode dialog {
+  background-color: #0c0c0d;
+}
+.dark-mode .form-upload-input,
+.dark-mode .closeDialogBtn {
+  background-color: #0c0c0d;
+}
+.dark-mode .form-upload-input::file-selector-button {
+  background-color: #383838;
+  color: #ffffff;
+}
+.dark-mode .form-upload-input::file-selector-button:hover {
+  background-color: #c56fff;
+}
+.dark-mode .closeDialogBtn:hover {
+  background-color: #c56fff;
+}
+.dark-mode #contetnt {
+  color: #ffffff;
+}
+
+@media (max-width: 991px) {
+  .mobile-block-upload,
+  .mobile-block-color {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media (max-width: 575px) {
+  html {
+    font-size: 14px;
+  }
+  .mobile-block-brand,
+  .form-upload-title {
+    display: none;
+  }
+  .closeDialogBtn {
+    margin-left: auto;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>RyuuKun</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- пользовательские стили -->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+
+      <!-- меню -->
+      <nav class="headroom navbar">
+          <div class="container">
+
+              <a class="navbar-brand d-flex justify-content-center align-items-center" href="#">
+                  <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                      <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z" />
+                      <path fill-rule="evenodd" d="M6 1h6v7a.5.5 0 0 1-.757.429L9 7.083 6.757 8.43A.5.5 0 0 1 6 8z" />
+                      <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2" />
+                  </svg>
+                  <span class="brand-text">Реестр <span class="mobile-block mobile-block-brand">рекламных площадок</span></span>
+              </a>
+
+              <div class=".collapse .navbar-collapse d-flex justify-content-center align-items-center ">
+                  <div class="upload-file d-lg-flex justify-content-center align-items-center">
+                      <svg class="nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                          <path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708z" />
+                          <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z" />
+                      </svg>
+                      <span class="mobile-block mobile-block-upload">Загрузить файл</span>
+                  </div>
+
+                  <div class="color-mode d-flex justify-content-center align-items-center">
+                      <svg class="nav-svg svg-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                          <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286" />
+                      </svg>
+                      <svg class="nav-svg svg-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+                          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+                      </svg>
+                      <span class="mobile-block mobile-block-color">Цветовой режим</span>
+                  </div>
+
+              </div>
+
+          </div>
+      </nav>
+
+      <!-- Всплывающее диалоговое окно -->
+      <dialog id="myDialog">
+          <form class="w-100 align-items-center" id="uploadForm" method="post" enctype="multipart/form-data">
+              <input style=" position: absolute;left: -9999px;" type="button">
+              <div class="upload-zone-dragover">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24">
+                      <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242M12 12v9" />
+                      <path d="m16 16-4-4-4 4" />
+                  </svg>
+                  <p>Перетащи файл сюда</p>
+              </div>
+              <div class="mx-lg-3 form-upload-container">
+                  <span class="form-upload-hint" id="uploadForm_Hint"></span>
+              </div>
+              <label class="mx-lg-3 d-flex flex-wrap justify-content-between align-items-center" for="uploadForm_file">
+                  <span class="form-upload-title">Или нажми кнопку</span>
+                  <input class="form-upload-input" id="uploadForm_File" type="file" aria-describedby="hint">
+                  <button class="closeDialogBtn" type="button">Закрыть</button>
+              </label>
+          </form>
+      </dialog>
+
+      <!-- Контент -->
+      <main>
+          <section class="container mb-2">
+              <div class="d-flex flex-nowrap justify-content-between align-items-center">
+                  <div class="search-box col d-flex ">
+                      <input class="search-input col" type="text" id="boxSearch" placeholder="Поиск...">
+                  </div>
+                  <button class="search-btn col-2" id="btnSearch">
+                      <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                      </svg>
+                  </button>
+              </div>
+              <div class="errorSearchBlock">
+                  <span class="textErrorSearch error"></span>
+              </div>
+          </section>
+
+          <section class="container mb-5 d-none" id="contetnt">
+              <h1 class="title">Список рекламных площадок по вашему запросу</h1>
+              <div id="AdvertisingPlatforms">
+              </div>
+          </section>
+
+      </main>
+      <div id="test"></div>
+
+      <!-- Статические файлы -->
+      <script src="js/static/jquery-3.3.1.min.js"></script>
+      <script src="js/static/popper.min.js"></script>
+      <script src="js/static/bootstrap.min.js"></script>
+      <script src="js/static/Headroom.js"></script>
+
+      <!-- Пользовательские файлы -->
+      <script src="js/jQuery.headroom.js"></script>
+      <script src="js/jQuery.bindings.js"></script>
+
+      <script src="js/models/appParameters.js"></script>
+      <script src="js/globalParameters.js"></script>
+
+      <script src="js/api/apiAdvertisingPlatforms.js"></script>
+
+      <script src="js/validation/validationFile.js"></script>
+      <script src="js/validation/validationLocation.js"></script>
+      <script src="js/services/advertisingPlatformsService.js"></script>
+  </body>
+</html>

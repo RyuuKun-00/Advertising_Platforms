@@ -1,0 +1,420 @@
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro:400,700');
+
+// VARIABLES
+$font-base: 'Maven Pro', sans-serif;
+$body-font-size: 18px;
+
+$font-weight-bold: bold;
+$font-weight-normal: normal;
+$font-weight-light: 300;
+
+$back-color:#ffffff;
+$text-color: #000000;
+$dark-back-color:#0c0c0d;
+$dark-text-color: #ffffff;
+$hover-upload-color: #1ae000;
+$hover-mode-color: #ffc200;
+$hover-btn-color:#c56fff;
+
+$search-back-color: #d8d8d8;
+$search-back-btn-color: #7c7c7c;
+$search-border-color: #3b3b3b;
+
+$result-text-color-success: #06a800;
+$result-text-color-error: #f00000;
+
+$h-font-size: 1.2rem;
+
+$link-font-size: 16px;
+@mixin transition-effect {
+	transition: all 0.4s ease;
+}
+
+html{
+	font-family: $font-base;
+	font-size: $body-font-size;
+  color: $text-color;
+}
+
+body {
+	padding-top: 70px;
+	background-color: $back-color;
+  fill:$text-color;
+}
+
+a {
+  color: $text-color;
+	font-weight: $font-weight-normal;
+	text-decoration: none !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: $text-color;
+  -webkit-box-shadow: 0 0 0px 1000px $search-back-color inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+// MENU
+.navbar {
+	position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999999;
+    will-change: transform;
+    transition: transform 200ms linear;
+	&[class*="-unpinned"] {
+      transform: translate(0, -150%);
+    }
+
+  &[class*="-pinned"] {
+    transform: translate(0, 0);
+  }
+
+  &[class*="headroom--not-top"] {
+    background: $back-color;
+    border-bottom: 1px solid #f0f0f0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.nav-svg{
+  height: 2rem;
+  margin-right: 10px;
+}
+
+.navbar-brand{
+  &:hover {
+    color: $text-color !important;
+    fill: $text-color !important;
+  }
+}
+
+.upload-file{
+  @include transition-effect;
+  &:hover {
+    color: $hover-upload-color !important;
+    fill: $hover-upload-color !important;
+  }
+}
+
+.color-mode{
+  @include transition-effect;
+  &:hover {
+    color: $hover-mode-color !important;
+    fill: $hover-mode-color !important;
+  }
+}
+
+.svg-moon{
+  display: block;
+}
+
+.svg-sun{
+  display: none;
+}
+
+.svg-moon,
+.svg-sun{
+  height: 1.5rem;
+}
+// COPYRIGHT TEXT
+.copyright-text {
+	font-size: 16px;
+	font-weight: $font-weight-normal;
+	display: block;
+}
+
+.upload-file{
+	margin-right: 10px;;
+}
+
+.color-mode, .upload-file {
+	cursor: pointer;
+}
+
+// DIALOG
+.success{
+  color:$result-text-color-success ;
+}
+
+.error {
+  color: $result-text-color-error;
+}
+
+dialog { 
+  margin: 0;
+  padding: 5px;
+  position: fixed;
+  border-radius: 10px;
+  max-width: 1000px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background-color: $back-color;
+  color: #000000;
+  justify-content: center;
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+.scroll-lock {
+  overflow: hidden;
+}
+
+.upload-zone-dragover {
+  height: 50vh;
+  min-height: 200px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid currentColor;
+  color: #FFFFFF;
+  font-weight: 500;
+  font-size: 18px;
+  place-content: center;
+  text-align: center;
+  background-color: #593273;
+}
+
+.upload-zone-dragover svg {
+  width: 15vw;
+  margin: auto;
+  pointer-events: none;
+}
+
+.upload-zone-dragover._active {
+  color: #c56fff;
+  background-color: #c56fff77;
+}
+
+.form-upload-container{
+  margin-bottom: 10px;
+}
+
+.form-upload-hint{
+  font-size: $font-weight-bold;
+}
+
+.form-upload-title {
+  font-weight: $font-weight-bold;
+}
+
+.form-upload-input {
+  background-color: $back-color;
+  user-select: none;
+}
+
+.form-upload-input::file-selector-button {
+  margin-right: 10px;
+  border: none;
+	height: 3rem;
+  border-radius: 10px;
+  @include transition-effect();
+  cursor: pointer;
+
+  &:hover {
+    background-color: $hover-btn-color;
+  }
+}
+
+.form-upload-input:focus{
+	border: none;
+}
+
+.closeDialogBtn{
+	border: none;
+	height: 3rem;
+	border-radius: 10px;
+	background-color: $back-color;
+	transition: background-color 0.2s linear;
+	&:hover{
+		background-color: $hover-btn-color;
+	}
+}
+
+// Строка поиска
+
+.search-box{
+  margin: 0;
+  padding: 0 3px 0 1rem;
+  border: $search-border-color 2px;
+  border-top-left-radius: 50vh;
+  border-bottom-left-radius: 50vh;
+  height:  2rem;
+  background-color: $search-back-color;
+}
+
+.search-input{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: auto;
+  padding: 0;
+  border: none;
+  height: 1.5rem;
+  background-color: $search-back-color;
+  outline: none;
+  &:focus{
+    outline: none;
+  }
+  &:active{
+    outline: none;
+  }
+}
+
+.search-btn{
+  margin: 0;
+  padding: 0;
+  border: $search-border-color 2px;
+  height: 2rem;
+  border-top-right-radius: 50vh;
+  border-bottom-right-radius: 50vh;
+  background-color: $search-back-btn-color;
+  @include transition-effect();
+  &:hover{
+    background-color: $hover-btn-color;
+  }
+}
+
+.search-svg{
+  height: 1.5rem;
+  fill:$dark-text-color;
+}
+
+// Контент
+
+details {
+  border: 1px solid #aaa;
+  padding: 0.5em 0.5em 0;
+}
+
+summary {
+  font-weight: bold;
+  margin: -0.5em -0.5em 0;
+  padding: 0.5em;
+}
+
+details[open] {
+  padding: 0.5em;
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+.group{
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
+#contetnt{
+  color: $text-color;
+  h1{
+    font-size: $h-font-size;
+  }
+}
+
+// Тёмный режим
+
+.dark-mode {
+	background: $dark-back-color;
+	.navbar {
+		&[class*="headroom--not-top"] {
+			background: $dark-back-color;
+			border-bottom: 1px solid #1f1f1f;
+	    }
+	}
+
+  .svg-moon{
+    display: none;
+  }
+
+  .svg-sun{
+    display: block;
+  }
+
+  .navbar-brand,
+	.color-mode,
+  .upload-file,
+  .form-upload-input,
+  .closeDialogBtn,
+  .form-upload-title{
+		color: $dark-text-color;
+		fill: $dark-text-color;
+  }
+
+  dialog{
+    background-color: $dark-back-color;
+  }
+
+  .form-upload-input,
+  .closeDialogBtn{
+    background-color: $dark-back-color;
+  }
+
+  .form-upload-input::file-selector-button{
+    background-color: #383838;
+    color: $dark-text-color;
+    &:hover{
+      background-color: $hover-btn-color;
+    }
+  }
+
+  .closeDialogBtn:hover{
+    background-color: $hover-btn-color;
+  }
+
+  #contetnt{
+    color: $dark-text-color;
+  }
+}
+
+// Экстрабольшие девайсы 
+@media (max-width: 1199px) 
+{ 
+
+}
+
+// Большие девайсы 
+@media (max-width: 991px) 
+{
+  .mobile-block-upload,
+  .mobile-block-color{
+    display: none;
+  }
+}
+
+// Средние девайсы 
+@media (max-width: 767px) 
+{
+  html{
+    font-size: 16px;
+  }
+}
+
+// Малые девайсы 
+@media (max-width: 575px) 
+{
+  html{
+    font-size: 14px;
+  }
+  .mobile-block-brand,
+  .form-upload-title{
+    display: none;
+  }
+
+  .closeDialogBtn{
+    margin-left: auto;
+  }
+}
